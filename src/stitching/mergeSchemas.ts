@@ -262,6 +262,7 @@ function defaultOnTypeConflict(
 
 function createMergeInfo(typeRegistry: TypeRegistry): MergeInfo {
   return {
+    typeRegistry,
     delegate(
       operation: 'query' | 'mutation' | 'subscription',
       fieldName: string,
