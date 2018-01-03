@@ -11,6 +11,8 @@ import {
   DocumentNode,
 } from 'graphql';
 
+import TypeRegistry from './stitching/TypeRegistry'
+
 /* TODO: Add documentation */
 
 export interface IResolverValidationOptions {
@@ -28,6 +30,7 @@ export interface IResolverOptions {
 }
 
 export type MergeInfo = {
+  typeRegistry: TypeRegistry,
   delegate: (
     type: 'query' | 'mutation' | 'subscription',
     fieldName: string,
